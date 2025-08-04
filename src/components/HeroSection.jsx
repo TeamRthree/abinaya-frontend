@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Right Image */}
       <div className="relative mt-12 md:mt-0">
         <img
-          src='public/images/doctor.jpg'
+          src='/images/doctor.jpg'
           alt="Dr. Abinaya"
           className="w-full max-w-sm md:max-w-md xl:w-xl object-contain "
         />
