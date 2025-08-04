@@ -1,0 +1,29 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <nav className="bg-[#FAFAFA] shadow-lg w-full fixed top-0 left-0 z-50">
+      <div className="w-full mx-auto px-24 py-4 flex items-center justify-between">
+        {/* Left Section */}
+        <div className="cursor-pointer">
+          <h1 className="text-xl font-bold text-[#3A405B]">
+            Dr. M. H. Abinaya
+          </h1>
+          <p className="text-sm text-[#FF56A6]">
+            Fertility | Obstetrics | Gynaecology
+          </p>
+        </div>
+
+        {/* Right Section */}
+        <div>
+          <Link to="/contact" className="bg-[#FF56A6] font-medium text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">
+            Book Appointment
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

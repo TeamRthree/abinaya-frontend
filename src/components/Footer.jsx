@@ -1,0 +1,184 @@
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaXTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
+import BackToTop from "./BackToTop";
+import { useRef } from "react";
+
+
+const footerLinks = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "Media", path: "/media" },
+  { name: "Testimonials", path: "/testimonials" },
+  { name: "Blog", path: "/blogs" },
+  { name: "Contact Us", path: "/contact" },
+];
+
+const Footer = () => {
+
+
+const messageRef = useRef();
+
+const handleWhatsAppSend = () => {
+  const message = messageRef.current.value.trim();
+  if (!message) return;
+
+  const phoneNumber = "917305056693"; // Use your WhatsApp number in international format (no +)
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  window.open(whatsappURL, "_blank");
+
+  // Optional: clear input after send
+  messageRef.current.value = "";
+};
+
+
+  return (
+    <footer className="bg-[#FF77B7] mx-23 text-white px-6 md:px-24 pt-12 pb-6">
+      <div className="flex justify-between ">
+        {/* Left Column */}
+        <div className="flex">
+          <div className="flex justify-between flex-col">
+            <div>
+<h2 className="text-[26px] font-bold ">Dr. M. H. Abinaya</h2>
+          <p className="mb-4 font-light text-[14px]">
+            Fertility | Obstetrics | Gynaecology
+          </p>
+            </div>
+            
+
+          <div className="flex gap-8 mt-5 text-xl">
+  <a
+    href="https://twitter.com/sairamclinic"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Twitter"
+    className="hover:text-white/80 transition text-[24px]"
+  >
+    <FaXTwitter />
+  </a>
+  <a
+    href="https://facebook.com/sairamclinic"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="hover:text-white/80 transition text-[24px]"
+  >
+    <FaFacebookF />
+  </a>
+  <a
+    href="https://instagram.com/sairamclinic"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="hover:text-white/80 transition text-[24px]"
+  >
+    <RiInstagramFill />
+  </a>
+  <a
+    href="https://youtube.com/@sairamclinic"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube"
+    className="hover:text-white/80 transition text-[24px]"
+  >
+    <FaYoutube />
+  </a>
+</div>
+
+          </div>
+        </div>
+
+{/* address */}
+        <div className="h-full">
+            <p className="font-semibold text-[18px] mb-2">Office</p>
+            <div className="flex flex-col gap-4 justify-between">
+<div className="mb-4 font-light text-white/90">
+            
+            <p>15/6 Vidyodaya 1st Cross St,</p>
+            <p>T. Nagar, Chennai-600017</p>
+          </div>
+
+          <div className="text-white/90 font-light">
+            <p className="">+91 93423 89585</p>
+            <a href="mailto:doctor@sairamclinic.in" className="underline block">
+              doctor@sairamclinic.in
+            </a>
+          </div>
+            </div>
+            
+          </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="font-semibold text-[18px] mb-2">Quick Links</h3>
+          <ul className="space-y-3">
+            {footerLinks.map((link, idx) => (
+              <li key={idx}>
+                <Link
+  to={link.path}
+  className="relative font-light text-white/90 group"
+>
+  <span className="hover-underline">{link.name}</span>
+</Link>
+
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col justify-between">
+            {/* Appointment Box */}
+        <div>
+          <h3 className="font-semibold text-[18px] mb-2">Book an Appointment</h3>
+          <div className="flex rounded-[6px] overflow-hidden w-full max-w-xs">
+  <input
+    type="text"
+    ref={messageRef}
+    placeholder="Send a Message"
+    className="px-4 py-3 w-full bg-white text-black placeholder:text-gray-400"
+  />
+  <button
+    onClick={handleWhatsAppSend}
+    className="group bg-[#FF3F9A] text-white px-4 cursor-pointer transition-all duration-200 ease-in-out"
+  >
+    <FaArrowRight className="group-hover:-rotate-45 transition-all duration-200 ease-in-out" />
+  </button>
+</div>
+
+        </div>
+
+        {/* Practice Info */}
+        <div>
+          <h3 className="font-bold text-[16px] mb-4">Places of Practice</h3>
+          <p className="mb-2 font-light">
+            Sai Ram Fertility & Maternity Clinic
+          </p>
+          <div className="flex gap-6 space-y-2 text-white/90 text-sm">
+            <p className="font-light">
+              <span className="font-semibold">Mon – Sat</span><br />
+              07:00 AM to 09:00 PM
+            </p>
+            <p className="font-light">
+              <span className="font-semibold">Sun</span><br />
+              08:00 AM – 01:00 PM
+            </p>
+          </div>
+        </div>
+        </div>
+
+        <div>
+            <BackToTop/>
+        </div>
+      </div>
+
+      {/* Bottom line */}
+      <div className="border-t border-white/20 mt-10 pt-4 text-center text-[16px] text-neutral-100">
+        Copyright © 2025 Dr. Abinaya M.H. All Rights Reserved
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
