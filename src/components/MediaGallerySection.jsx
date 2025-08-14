@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { FaSearch } from "react-icons/fa";
 import GalleryHero from "./GalleryHero";
 import GallerySection from "./GallerySection";
+import api from "../api/api";
+
 
 const instagramData = [
   { type: "instagram", title: "Postnatal Tips", url: "https://www.instagram.com/reel/xyz1/" },
@@ -22,16 +23,16 @@ const MediaGallerySection = () => {
   const [youtubeData, setYoutubeData] = useState([]);
   const [visibleCount, setVisibleCount] = useState(0);
 
-  useEffect(() => {
-    if (platform === "youtube") {
-      axios
-        .get("http://localhost:8000/api/youtube-videos")
-        .then((res) => {
-          setYoutubeData(res.data);
-        })
-        .catch((err) => console.error("Error fetching YouTube videos:", err));
-    }
-  }, [platform]);
+ useEffect(() => {
+  if (platform === "youtube") {
+    api.axios
+      .get("/youtube-videos")
+      .then((res) => {
+        setYoutubeData(res.data);
+      })
+      .catch((err) => console.error("Error fetching YouTube videos:", err));
+  }
+}, [platform]);
 
   useEffect(() => {
     setVisibleCount(platform === "youtube" ? 6 : 8);
