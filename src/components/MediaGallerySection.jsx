@@ -25,7 +25,7 @@ const MediaGallerySection = () => {
 
  useEffect(() => {
   if (platform === "youtube") {
-    api.axios
+    api
       .get("/youtube-videos")
       .then((res) => {
         setYoutubeData(res.data);
