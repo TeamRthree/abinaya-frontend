@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { FaXTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
 
 // Icons (replace with actual paths later)
 import HomeIcon from "../assets/home.svg";
@@ -25,10 +26,10 @@ const SideIcons = () => {
   ];
 
   const rightIcons = [
-    { icon: <FaYoutube size={30} />, alt: "YouTube", link: "https://youtube.com" },
-    { icon: <RiInstagramFill size={30} />, alt: "Instagram", link: "https://instagram.com" },
-    { icon: <FaXTwitter size={30} />, alt: "X", link: "https://x.com" },
-    { icon: <FaFacebookF size={30} />, alt: "Facebook", link: "https://facebook.com" },
+    { icon: <FaYoutube size={30} />, alt: "YouTube", link: "https://youtube.com/@drmhabinaya?si=M52q8bDA5778yEp2" },
+    { icon: <RiInstagramFill size={30} />, alt: "Instagram", link: "https://www.instagram.com/dr.m.h.abinaya?igsh=MWN3bXU1MHBzbTlkaA==" },
+    { icon: <FaLinkedin size={30} />, alt: "LinkedIn", link: "https://www.linkedin.com/in/abinaya-baskaran-685195353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { icon: <FaFacebookF size={30} />, alt: "Facebook", link: "https://www.facebook.com/profile.php?id=100063985333184&mibextid=ZbWKwL" },
   ];
 
   return (

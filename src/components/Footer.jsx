@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaXTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
 import BackToTop from "./BackToTop";
 import { useRef } from "react";
 
@@ -50,16 +51,16 @@ const handleWhatsAppSend = () => {
 
           <div className="flex gap-8 mt-5 text-xl">
   <a
-    href="https://twitter.com/sairamclinic"
+    href="https://www.linkedin.com/in/abinaya-baskaran-685195353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Twitter"
+    aria-label="LinkedIn"
     className="hover:text-white/80 transition text-[24px]"
   >
-    <FaXTwitter />
+    <FaLinkedin />
   </a>
   <a
-    href="https://facebook.com/sairamclinic"
+    href="https://www.facebook.com/profile.php?id=100063985333184&mibextid=ZbWKwL"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Facebook"
@@ -68,7 +69,7 @@ const handleWhatsAppSend = () => {
     <FaFacebookF />
   </a>
   <a
-    href="https://instagram.com/sairamclinic"
+    href="https://www.instagram.com/dr.m.h.abinaya?igsh=MWN3bXU1MHBzbTlkaA=="
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
@@ -77,7 +78,7 @@ const handleWhatsAppSend = () => {
     <RiInstagramFill />
   </a>
   <a
-    href="https://youtube.com/@sairamclinic"
+    href="https://youtube.com/@drmhabinaya?si=M52q8bDA5778yEp2"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="YouTube"
@@ -96,14 +97,14 @@ const handleWhatsAppSend = () => {
             <div className="flex flex-col gap-4 justify-between">
 <div className="mb-4 font-light text-white/90">
             
-            <p>15/6 Vidyodaya 1st Cross St,</p>
+            <p>15/6, Vidyodaya 1st Cross St,</p>
             <p>T. Nagar, Chennai-600017</p>
           </div>
 
           <div className="text-white/90 font-light">
-            <p className="">+91 93423 89585</p>
-            <a href="mailto:doctor@sairamclinic.in" className="underline block">
-              doctor@sairamclinic.in
+            <p className="">+91 98406 52740</p>
+            <a href="mailto:info@sairamclinic.in" className="underline block">
+              info@sairamclinic.in
             </a>
           </div>
             </div>

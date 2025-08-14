@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { textTestimonials } from "../data/testimonialData"; // Update with correct path
+import api from "../api/api"; // ✅ use axios instance for live backend
 import BookAppointmentForm from "../components/BookAppointmentForm";
 import VideoTestimonials from "../components/VideoTestimonials";
 
 const TestimonialPage = () => {
+  const [testimonials, setTestimonials] = useState([]);
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const sortedTestimonials = [...textTestimonials].sort(
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await api.get("/testimonials");
+        setTestimonials(res.data || []);
+      } catch (err) {
+        console.error("Failed to fetch testimonials:", err);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+
+  const sortedTestimonials = [...testimonials].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
 
@@ -17,8 +31,7 @@ const TestimonialPage = () => {
 
   return (
     <section className="w-7xl mx-auto py-20 px-4 md:px-10">
-
-<div className=" w-full  rounded-2xl overflow-hidden shadow-lg">
+      <div className="w-full rounded-2xl overflow-hidden shadow-lg">
         <div className="relative">
           <img
             src="/images/faq-banner.png"
@@ -43,19 +56,20 @@ const TestimonialPage = () => {
       <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#E64771] mb-[10px] mt-[60px]">
         What Our Patients Say
       </h2>
-      <p className="mb-[50px] text-[20px] text-[#3A405B]/70 text-center">Real stories from real patients who’ve trusted us with their care.</p>
-<div className="hidden">
-<VideoTestimonials/>
-</div>
-      
+      <p className="mb-[50px] text-[20px] text-[#3A405B]/70 text-center">
+        Real stories from real patients who’ve trusted us with their care.
+      </p>
+
+      <div className="hidden">
+        <VideoTestimonials />
+      </div>
 
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-7xl mx-auto">
         {sortedTestimonials.slice(0, visibleCount).map((t, i) => (
           <div
-style={{
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', // x=0, y=0 → all-around glow
-  }}
-
+            style={{
+              boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+            }}
             key={i}
             className="bg-white p-6 rounded-xl break-inside-avoid border border-gray-100"
           >
@@ -75,7 +89,9 @@ style={{
                 idx < t.rating ? <FaStar key={idx} /> : <FaRegStar key={idx} />
               )}
             </div>
-            <p className="text-[16px] text-[#3A405B]/80 leading-relaxed">{t.text}</p>
+            <p className="text-[16px] text-[#3A405B]/80 leading-relaxed">
+              {t.content}
+            </p>
           </div>
         ))}
       </div>
@@ -91,14 +107,12 @@ style={{
         </div>
       )}
 
-
-
-     <div>
-      <h2 className="text-center text-3xl md:text-[36px] font-medium text-[#E64771] pt-[60px] mb-10">
-        Ready to Start Your Health Journey?
-      </h2>
-<BookAppointmentForm/>
-        </div>
+      <div>
+        <h2 className="text-center text-3xl md:text-[36px] font-medium text-[#E64771] pt-[60px] mb-10">
+          Ready to Start Your Health Journey?
+        </h2>
+        <BookAppointmentForm />
+      </div>
     </section>
   );
 };
