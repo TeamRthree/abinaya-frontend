@@ -12,14 +12,15 @@ import Testimonial from "./pages/TestimonialPage";
 import BlogsPage from "./pages/BlogsPage";
 import BlogPage from "./pages/BlogPage";
 import ScrollToTop from './components/ScrollToTop';
+import SocialMedia from './components/SocialMedia';
 function App() {
   return (
     <Router>
       <ScrollToTop/>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <Navbar />
         <SideIcons />
-        <div className="pt-24 mx-23">
+        <div className=" pt-24 md:mx-23">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
@@ -31,6 +32,10 @@ function App() {
         <Route path="/blogs/:slug" element={<BlogPage />} />
           </Routes>
         </div>
+        <div className="block md:hidden">
+            <SocialMedia />
+           
+          </div>
         <Footer />
       </div>
     </Router>

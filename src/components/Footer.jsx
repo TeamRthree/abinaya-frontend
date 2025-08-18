@@ -36,8 +36,8 @@ const handleWhatsAppSend = () => {
 
 
   return (
-    <footer className="bg-[#FF77B7] mx-23 text-white px-6 md:px-24 pt-12 pb-6">
-      <div className="flex justify-between ">
+    <footer className="bg-[#FF77B7] md:mx-23 text-white px-4 md:px-24  pt-12 pb-24 md:pb-6">
+      <div className="flex justify-between items-center md:items-start flex-col md:flex-row">
         {/* Left Column */}
         <div className="flex">
           <div className="flex justify-between flex-col">
@@ -92,10 +92,10 @@ const handleWhatsAppSend = () => {
         </div>
 
 {/* address */}
-        <div className="h-full">
+        <div className="h-full mt-6 md:mt-0 text-center md:text-start">
             <p className="font-semibold text-[18px] mb-2">Office</p>
             <div className="flex flex-col gap-4 justify-between">
-<div className="mb-4 font-light text-white/90">
+<div className="md:mb-4 font-light text-white/90">
             
             <p>15/6, Vidyodaya 1st Cross St,</p>
             <p>T. Nagar, Chennai-600017</p>
@@ -112,27 +112,32 @@ const handleWhatsAppSend = () => {
           </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="font-semibold text-[18px] mb-2">Quick Links</h3>
-          <ul className="space-y-3">
-            {footerLinks.map((link, idx) => (
-              <li key={idx}>
-                <Link
-  to={link.path}
-  className="relative font-light text-white/90 group"
->
-  <span className="hover-underline">{link.name}</span>
-</Link>
+       <div className="text-center mt-6">
+  <h3 className="font-semibold text-[18px] mb-2">Quick Links</h3>
+  <ul 
+    className="
+      grid grid-cols-2 gap-8 
+      md:grid-cols-1 md:gap-3
+    "
+  >
+    {footerLinks.map((link, idx) => (
+      <li key={idx}>
+        <Link
+          to={link.path}
+          className="relative font-light text-white/90 group block text-center md:text-left"
+        >
+          <span className="hover-underline">{link.name}</span>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
-              </li>
-            ))}
-          </ul>
-        </div>
 
         <div className="flex flex-col justify-between">
             {/* Appointment Box */}
-        <div>
-          <h3 className="font-semibold text-[18px] mb-2">Book an Appointment</h3>
+        <div className="py-12 md:py-0 text-center md:text-start">
+          <h3 className="font-semibold text-[18px] mb-4 md:mb-2">Book an Appointment</h3>
           <div className="flex rounded-[6px] overflow-hidden w-full max-w-xs">
   <input
     type="text"
@@ -151,7 +156,7 @@ const handleWhatsAppSend = () => {
         </div>
 
         {/* Practice Info */}
-        <div>
+        <div className="text-center md:text-start">
           <h3 className="font-bold text-[16px] mb-4">Places of Practice</h3>
           <p className="mb-2 font-light">
             Sai Ram Fertility & Maternity Clinic
@@ -169,13 +174,13 @@ const handleWhatsAppSend = () => {
         </div>
         </div>
 
-        <div>
+        <div className="hidden md:block">
             <BackToTop/>
         </div>
       </div>
 
       {/* Bottom line */}
-      <div className="border-t border-white/20 mt-10 pt-4 text-center text-[16px] text-neutral-100">
+      <div className="border-t border-white/20 md:mt-10 pt-4 text-center text-[12px] md:text-[16px] text-neutral-100">
         Copyright © 2025 Dr. Abinaya M.H. All Rights Reserved
       </div>
     </footer>

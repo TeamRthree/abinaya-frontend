@@ -15,16 +15,32 @@ const PartnersSection = () => {
       </div>
 
       {/* Logo Grid */}
-      <div className="flex  items-center justify-center bg-white gap-40 py-[51px] ">
-        {partners.map((partner, index) => (
-          <div key={index} className="flex justify-center items-center">
-            <img
-              src={partner.src}
-              alt={partner.name}
-              className="h-20 object-contain  transition duration-300"
-            />
-          </div>
-        ))}
+      <div className="grid gap-y-10 md:flex md:justify-center md:gap-16 py-10 px-4">
+        {/* First row - 3 logos */}
+        <div className="col-span-full flex justify-center gap-10 md:gap-16">
+          {partners.slice(0, 3).map((partner, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <img
+                src={partner.src}
+                alt={partner.name}
+                className="h-12 sm:h-16 md:h-20 object-contain transition duration-300"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Second row - 2 logos */}
+        <div className="col-span-full flex justify-center gap-10 md:gap-16">
+          {partners.slice(3).map((partner, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <img
+                src={partner.src}
+                alt={partner.name}
+                className="h-12 sm:h-16 md:h-20 object-contain transition duration-300"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

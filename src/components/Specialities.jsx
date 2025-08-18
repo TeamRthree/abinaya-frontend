@@ -40,7 +40,7 @@ const specialities = [
   },
   {
     title: 'Laparoscopic Surgery',
-    desc: 'Tubal Ligation, Tubal Recanalization, Diagnostic Hysterolaparoscopy, Laparoscopic Myomectomy, Laparoscopic Hysterectomy, Laparoscopic Ovarian Cystectomy, Hysteroscopic Septal Resection, Hysteroscopic Polypectomy',
+    desc: 'Tubal Ligation, Tubal Recanalization, Diagnostic Hysterolaparoscopy, Laparoscopic Myomectomy, Hysteroscopic Septal Resection, Hysteroscopic Polypectomy',
     icon: '/images/laparoscopic.svg',
     hoverIcon: '/images/laparoscopic-white.svg',
     id: 'laparoscopic-Surgery'
@@ -66,8 +66,8 @@ const handleClick = (id) => {
 
 
   return (
-    <section className="w-full py-20 px-4 md:px-10 bg-[#D41E59]/10">
-      <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#1D1E4C] mb-[100px]">Specialities</h2>
+    <section className="w-full py-10 md:py-20 px-4 md:px-10 bg-[#D41E59]/10">
+      <h2 className="text-center text-[24px] md:text-4xl font-semibold text-[#1D1E4C] mb-12 md:mb-[100px]">Specialities</h2>
       <div className="xl:w-6xl mx-auto grid md:grid-cols-2 xl:grid-cols-2 gap-6 max-w-6xl">
         {specialities.map((item, index) => (
           <div
@@ -80,20 +80,20 @@ const handleClick = (id) => {
               <img
                 src={item.icon}
                 alt={item.title}
-                className="w-20 h-20 shrink-0 block group-hover:hidden"
+                className="w-[48px] md:w-20  md:h-20 shrink-0 block group-hover:hidden"
               />
               {/* Hover Icon */}
               <img
                 src={item.hoverIcon}
                 alt={`${item.title} hover`}
-                className="w-20 h-20 shrink-0 hidden group-hover:block"
+                className="w-[48px] md:w-20  md:h-20 shrink-0 hidden group-hover:block"
               />
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold group-hover:text-white text-[#3A405B]">
+                <h3 className="text-[16px] md:text-xl font-bold group-hover:text-white text-[#3A405B]">
                   {item.title.toUpperCase()}
                 </h3>
-                <p className="mt-2 text-[16px] font-light md:text-base leading-relaxed group-hover:text-white text-[#3A405B]/70">
+                <p className="mt-2 text-[12px] md:text-[16px] font-light md:text-base leading-relaxed group-hover:text-white text-[#3A405B]/70">
                   {item.desc}
                 </p>
               </div>

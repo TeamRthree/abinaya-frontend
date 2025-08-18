@@ -81,11 +81,11 @@ const BookAppointmentForm = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center relative">
+    <section className="w-full flex flex-col px-4 md:px-0 items-center relative">
       <form
         onSubmit={handleSubmit}
         style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)" }}
-        className="w-3xl bg-white rounded-[10px] py-14 px-20 flex flex-col gap-4 relative"
+        className="w-full md:w-3xl bg-white rounded-[10px] py-14 px-2 md:px-20 flex flex-col gap-4 relative"
       >
         {isSubmitted && (
           <div className="absolute inset-0 rounded-[10px] bg-[#FFF2F6] flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10">
@@ -111,9 +111,9 @@ const BookAppointmentForm = () => {
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="w-full border border-[#D9D9D9] text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+              className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
             />
-            <p className="text-[#F564A9]/70 text-sm mt-1">{errors.name}</p>
+            <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.name}</p>
           </div>
           <div>
             <input
@@ -122,9 +122,9 @@ const BookAppointmentForm = () => {
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className="w-full border border-[#D9D9D9] text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+              className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
             />
-            <p className="text-[#F564A9]/70 text-sm mt-1">{errors.email}</p>
+            <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.email}</p>
           </div>
         </div>
 
@@ -135,9 +135,9 @@ const BookAppointmentForm = () => {
             placeholder="Phone Number"
             value={form.phone}
             onChange={handleChange}
-            className="w-full border border-[#D9D9D9] text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+            className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
           />
-          <p className="text-[#F564A9]/70 text-sm mt-1">{errors.phone}</p>
+          <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.phone}</p>
         </div>
 
         <div>
@@ -145,7 +145,7 @@ const BookAppointmentForm = () => {
     name="service"
     value={form.service}
     onChange={handleChange}
-    className="w-full border border-[#D9D9D9] text-[#3A405B] px-4 py-3 rounded-md outline-none bg-white"
+    className="w-full border border-[#D9D9D9] text-[#3A405B] text-[12px] md:text-[14px] px-4 py-3 rounded-md outline-none bg-white"
   >
     <option value="">Select a Service</option>
     <option value="Fertility">Fertility</option>
@@ -155,7 +155,7 @@ const BookAppointmentForm = () => {
     <option value="Menstrual Health">Menstrual Health</option>
     <option value="Other">Other</option>
   </select>
-  <p className="text-[#F564A9]/70 text-sm mt-1">{errors.service}</p>
+  <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.service}</p>
 </div>
 
 
@@ -166,15 +166,15 @@ const BookAppointmentForm = () => {
             rows={4}
             value={form.message}
             onChange={handleChange}
-            className="w-full border border-[#D9D9D9] text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none resize-none"
+            className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none resize-none"
           />
-          <p className="text-[#F564A9]/70 text-sm mt-1">{errors.message}</p>
+          <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.message}</p>
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="bg-[#FF56A6] font-medium text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border w-fit mx-auto hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out disabled:opacity-50"
+          className="bg-[#FF56A6] font-medium text-[14px] md:text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border w-fit mx-auto hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out disabled:opacity-50"
         >
           {loading ? "Booking..." : "Book Appointment"}
         </button>

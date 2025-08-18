@@ -7,29 +7,32 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full mx-auto bg-white py-16 px-4 md:px-12 lg:px-40 flex flex-col md:flex-row items-center justify-between">
+    <section className="relative md:w-full mx-auto bg-white md:py-16 px-4 md:px-12 lg:px-40 flex flex-col md:flex-row items-center justify-between">
       {/* Left Content */}
-      <div className="max-w-xl space-y-6 text-center md:text-left">
-        <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
+      <div className="md:max-w-xl space-y-6 text-center md:text-left">
+        <h1 className="text-[20px] md:text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
           Caring For Women At Every Step Of Their Motherhood Journey.
         </h1>
-        <p className="text-[#686A74] text-base sm:text-[20px] pe-18">
+        <p className="text-[#686A74] text-[12px] sm:text-[20px] md:pe-18">
           Expert care in fertility and pregnancy, tailored to your journey. With you from the first step to the moment you hold your baby.
         </p>
-        <Link to="/contact" className="bg-[#FF56A6] font-medium text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">
+        <Link to="/contact" className="bg-[#FF56A6] font-medium text-[14px] md:text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">
             Book Appointment
           </Link>
 
         {/* Stats Row */}
-        <StatsSection/>
+        <div className="hidden md:block">
+ <StatsSection />
+        </div>
+       
       </div>
 
       {/* Right Image */}
-      <div className="relative mt-12 md:mt-0">
+      <div className=" relative mt-12 md:mt-0">
         <img
           src='/images/doctor.jpg'
           alt="Dr. Abinaya"
-          className="w-full max-w-sm md:max-w-md xl:w-xl object-contain "
+          className="w-xs md:w-full max-w-sm md:max-w-md xl:w-xl object-contain "
         />
 
         {/* Decorations */}
@@ -51,6 +54,9 @@ const HeroSection = () => {
 />
 
       </div>
+      <div className="block md:hidden">
+ <StatsSection />
+        </div>
     </section>
   );
 };

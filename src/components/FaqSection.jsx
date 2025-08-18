@@ -38,22 +38,32 @@ const FaqSection = () => {
       <h2 className="text-center text-[24px] md:text-[30px] font-semibold text-[#E64771] mb-[100px]">
         Things You Often Ask
       </h2>
-      <div className="absolute top-46 left-60 rounded-full w-10 h-10 p-40 bg-[#FFE2F0]">
+      <div className="relative md:hidden w-full flex justify-center">
+         <div className="absolute -top-8 left-14  rounded-full w-6 h-6 p-20 bg-[#FFE2F0]"></div>
+          <img
+            src="/images/faq-illustration.png"
+            alt="Pregnancy Illustration"
+            className="max-w-[120px] z-1"
+            
+          />
+         
+        </div>
+      <div className="hidden md:block absolute top-46 left-60 rounded-full w-10 h-10 p-40 bg-[#FFE2F0]">
 
       </div>
-<div className="absolute bottom-76 left-34 w-full md:w-1/3 flex justify-center">
+<div className="hidden md:flex absolute bottom-76 left-34 w-full md:w-1/3 justify-center">
           <img
             src="/images/faq-illustration.png"
             alt="Pregnancy Illustration"
             className="max-w-[280px] md:max-w-[320px]"
           />
         </div>
-      <div className="w-7xl mx-auto flex flex-col items-end justify-end gap-10">
+      <div className=" md:w-7xl mx-auto flex flex-col items-end justify-end md:gap-10">
        
     
 
         {/* Right Side - FAQs */}
-        <div className="w-3xl flex flex-col gap-4 h-[400px]">
+        <div className="md:w-3xl flex flex-col gap-4 md:h-[400px]">
           {faqs.map((item, index) => {
             const isOpen = openIndexes.includes(index);
             return (
@@ -103,22 +113,22 @@ const FaqSection = () => {
         </div>
 
          {/* CTA Bottom Banner */}
-      <div className="mt-16 w-full  rounded-2xl overflow-hidden shadow-lg">
+      <div className="mt-16 md:w-full rounded-[4px] md:rounded-2xl overflow-hidden shadow-lg">
         <div className="relative">
           <img
             src="/images/faq-banner.png"
             alt="Consultation CTA"
-            className="w-full h-[220px] object-cover"
+            className="w-full h-[220px] object-fit"
           />
           <div className="absolute inset-0 bg-[#FF56A6]/20 flex flex-col items-center justify-center text-white text-center px-4">
-            <h3 className="text-xl md:text-[36px] leading-11 font-semibold mb-2">
+            <h3 className="text-xl md:text-[36px] md:eading-11 font-semibold mb-2">
               Schedule a Consultation <br className="hidden md:block" />
               with Our Specialist?
             </h3>
-            <p className="text-sm md:text-[24px] mb-4">
+            <p className="text-[12px] md:text-[24px] mb-4">
               A successful pregnancy starts with the right advice — book now.
             </p>
-            <button className="bg-white text-[#E64771] px-5 py-2 rounded-[4px] font-medium text-[18px] transition-all duration-300 ease-in-out hover:bg-[#E64771] hover:text-white ">
+            <button className="bg-white text-[#E64771] px-5 py-2 rounded-[4px] font-medium text-[14px] md:text-[18px] transition-all duration-300 ease-in-out hover:bg-[#E64771] hover:text-white ">
               Book Appointment
             </button>
           </div>
