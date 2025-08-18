@@ -68,23 +68,23 @@ console.log("Visible Media Videos:", visibleMediaVideos);
   return (
     <section className="w-full px-4 pt-10 pb-[125px] max-w-7xl mx-auto">
       {/* Tabs and Search */}
-      <div className="flex items-center rounded-[6px] border-[0.2px] border-black/20 overflow-hidden w-full mb-10">
-        <div className="flex justify-start w-[70%]">
+      <div className="flex items-center rounded-[2px] md:rounded-[6px] border-[0.2px] border-black/20 overflow-hidden w-full mb-10">
+        <div className="flex justify-start md:w-[70%]">
           <button
-            className={`px-24 rounded-[6px] py-3 font-medium ${activeTab === "media" ? "bg-[#FF56A6] text-white" : "bg-white text-gray-500"}`}
+            className={`px-[14px] md:px-24 rounded-[2px] md:rounded-[6px] py-[8px] md:py-3 font-medium ${activeTab === "media" ? "bg-[#FF56A6] text-white" : "bg-white text-gray-500"}`}
             onClick={() => setActiveTab("media")}
           >
             Media
           </button>
           <button
-            className={`px-24 rounded-[6px] py-3 font-medium ${activeTab === "gallery" ? "bg-[#FF56A6] text-white" : "bg-white text-gray-500"}`}
+            className={`px-[14px] md:px-24 rounded-[2px] md:rounded-[6px] py-[8px] md:py-3 font-medium ${activeTab === "gallery" ? "bg-[#FF56A6] text-white" : "bg-white text-gray-500"}`}
             onClick={() => setActiveTab("gallery")}
           >
             Gallery
           </button>
         </div>
 
-        <div className="flex items-center w-[30%] rounded-[4px] me-1 px-4 bg-white">
+        <div className="flex items-center md:w-[30%] rounded-[4px] me-1 md:px-4 bg-white">
           <input
             type="text"
             placeholder="Search"
@@ -103,7 +103,7 @@ console.log("Visible Media Videos:", visibleMediaVideos);
           <h2 className="text-center text-[#E64771] text-[36px] font-bold mb-6">
             Latest Updates
           </h2>
-          <div className={`grid gap-6 mb-10 ${platform === "instagram" ? "md:grid-cols-4" : "md:grid-cols-3"}`}>
+          <div className={`grid gap-6 mb-10 ${platform === "instagram" ? "grid-cols-2 md:grid-cols-4" : "md:grid-cols-3"}`}>
             {latestUpdates.map((video, idx) => (
               <div key={idx} className="rounded-[10px] overflow-hidden p-2 border border-[#3A405B]/20">
                 {platform === "youtube" ? (
@@ -120,7 +120,7 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                     <img
                       src="/images/instagram-placeholder.jpg"
                       alt={video.title}
-                      className="w-full h-[440px] object-cover rounded-[5px]"
+                      className="w-full h-[220px] md:h-[440px] object-cover rounded-[5px]"
                     />
                   </a>
                 )}
@@ -135,7 +135,7 @@ console.log("Visible Media Videos:", visibleMediaVideos);
           <div className="flex justify-center items-center mb-6">
             <div className="flex rounded-xl overflow-hidden shadow-md border border-[#E5E5E5]">
               <button
-                className={`w-32 h-20 flex items-center justify-center transition-all duration-300 ${
+                className={`w-24 h-12 md:w-32 md:h-20 flex items-center justify-center transition-all duration-300 ${
                   platform === "youtube" ? "bg-white" : "bg-[#F9F9F9]"
                 }`}
                 onClick={() => handlePlatformChange("youtube")}
@@ -145,11 +145,11 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                   alt="YouTube"
                   className={`transition-all duration-300 ${
                     platform === "youtube" ? "scale-120 opacity-100" : "scale-80 opacity-50"
-                  } w-10 h-10`}
+                  } w-8 h-8 md:w-10 md:h-10`}
                 />
               </button>
               <button
-                className={`w-32 h-20 flex items-center justify-center transition-all duration-300 ${
+                className={`w-24 h-12 md:w-32 md:h-20 flex items-center justify-center transition-all duration-300 ${
                   platform === "instagram" ? "bg-white" : "bg-[#F9F9F9]"
                 }`}
                 onClick={() => handlePlatformChange("instagram")}
@@ -159,14 +159,14 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                   alt="Instagram"
                   className={`transition-all duration-300 ${
                     platform === "instagram" ? "scale-120 opacity-100" : "scale-80 opacity-50"
-                  } w-8 h-8`}
+                  } w-6 h-6 md:w-8 md:h-8`}
                 />
               </button>
             </div>
           </div>
 
           {/* Grid of Videos */}
-          <div className={`grid gap-6 ${platform === "instagram" ? "md:grid-cols-4" : "md:grid-cols-3"}`}>
+          <div className={`grid gap-6 ${platform === "instagram" ? "md:grid-cols-4 grid-cols-2" : "md:grid-cols-3"}`}>
             {visibleMediaVideos.map((video, idx) => (
               <div key={idx} className="rounded-[10px] overflow-hidden border p-2 border-[#3A405B]/20 animate-fade-up">
                 {platform === "youtube" ? (
@@ -183,7 +183,7 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                     <img
                       src="/images/instagram-placeholder.jpg"
                       alt={video.title}
-                      className="w-full h-[440px] object-cover rounded-[5px]"
+                      className="w-full h-[220px] md:h-[440px] object-cover rounded-[5px]"
                     />
                   </a>
                 )}

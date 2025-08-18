@@ -115,7 +115,7 @@ const CareSpecialities = () => {
           <div
             key={index}
             id={item.id}
-            className="flex flex-col md:flex-row  items-center gap-12 "
+            className="flex flex-col md:flex-row  md:items-center gap-12 "
           >
             <div style={{
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.4)', // x=0, y=0 → all-around glow
@@ -128,16 +128,16 @@ const CareSpecialities = () => {
             </div>
 
             <div className="flex-1">
-              <h3 className="text-[#EA3C60] text-[34px] font-bold mb-1">
+              <h3 className="text-[#EA3C60] text-[26px] md:text-[34px] font-bold mb-1">
                 {item.title}
               </h3>
               
-              <ul className="list-disc list-inside text-[#3A405B]/70 text-[24px] space-y-1 mb-4">
+              <ul className="list-disc list-inside text-[#3A405B]/70 text-[16px] md:text-[24px] space-y-1 mb-4">
                 {item.points.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}
               </ul>
-              <Link to="/contact" className="bg-[#FF56A6] font-medium text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">
+              <Link to="/contact" className="bg-[#FF56A6] font-medium text-[14px] md:text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">
             Book Appointment
           </Link>
             </div>
