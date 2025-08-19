@@ -36,8 +36,8 @@ const handleWhatsAppSend = () => {
 
 
   return (
-    <footer className="bg-[#FF77B7] md:mx-23 text-white px-4 md:px-24  pt-12 pb-24 md:pb-6">
-      <div className="flex justify-between items-center md:items-start flex-col md:flex-row">
+    <footer className="bg-[#FF77B7] md:mx-23 text-white px-4 md:px-18 2xl:px-24  pt-12 pb-24 md:pb-6">
+      <div className="flex justify-between items-center md:items-start flex-col lg:flex-row">
         {/* Left Column */}
         <div className="flex">
           <div className="flex justify-between flex-col">
@@ -112,7 +112,7 @@ const handleWhatsAppSend = () => {
           </div>
 
         {/* Quick Links */}
-       <div className="text-center mt-6">
+       <div className="text-center mt-6 md:mt-0">
   <h3 className="font-semibold text-[18px] mb-2">Quick Links</h3>
   <ul 
     className="

@@ -7,7 +7,7 @@ const RecentBlogsSection = () => {
 
   return (
     <section className="py-12 px-4  md:px-10 bg-white">
-      <div className="md:w-5xl mx-auto">
+      <div className="xl:w-5xl mx-auto">
         <h2 className="text-[#E73C7E] text-[24px] md:text-[36px] font-medium text-center mb-4">
           Blogs
         </h2>
@@ -15,7 +15,7 @@ const RecentBlogsSection = () => {
           We share common trends, strategies ideas, opinions, short & long stories from the team behind company.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Big Left Card */}
           <Link
           style={{

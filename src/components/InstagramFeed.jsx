@@ -7,7 +7,7 @@ const InstagramFeed = () => {
         Feeds On Instagram
       </h2>
 
-      <div className="grid grid-cols-2  md:grid-cols-4 gap-4 md:gap-14 px-4 md:px-10">
+      <div className="grid grid-cols-2  lg:grid-cols-4 gap-4 md:gap-14 px-4 md:px-10">
         {[1, 2, 3, 4].map((_, index) => (
           <div
             key={index}

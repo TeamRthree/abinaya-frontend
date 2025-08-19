@@ -1,6 +1,6 @@
 const AboutSection = () => {
   return (
-    <section className="w-full xl:w-6xl mx-auto py-12 md:py-20 px-4 md:px-0 bg-white relative">
+    <section className="w-full 2xl:w-6xl mx-auto py-12 md:py-20 px-4 md:px-4 bg-white relative">
       {/* Container */}
       <div className="max-w-6xl mx-auto flex flex-col md:mb-20 md:flex-row items-center gap-10 relative">
         {/* Left: Doctor Image */}
@@ -32,7 +32,7 @@ const AboutSection = () => {
 
 <img
               src="/images/mother-vector.png"
-              className="absolute hidden md:block top-37 right-0"
+              className="absolute hidden lg:block top-37 right-0"
               alt="decor star"
             />
 
@@ -57,7 +57,7 @@ const AboutSection = () => {
       {/* Description Card */}
       <div style={{
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)', // x=0, y=0 → all-around glow
-  }} className="relative max-w-6xl z-40 mx-auto mt-12 bg-white rounded-xl border border-[#EA3C60]/80 px-6 md:px-10 py-8 md:py-16 text-gray-700 leading-relaxed">
+  }} className="relative max-w-4xl xl:max-w-6xl z-40 mx-auto mt-12 bg-white rounded-xl border border-[#EA3C60]/80 px-6 md:px-10 py-8 md:py-16 text-gray-700 leading-relaxed">
         <h3 className="text-[24px] md:text-[32px] font-bold text-[#3A405B] mb-4">About Dr. M. H. Abinaya</h3>
         <p className="mb-4 text-[14px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
           Dr.M.H.Abinaya is a skilled specialist in fertility, obstetrics and gynaecology with more than 20 years of experience.
@@ -72,7 +72,7 @@ const AboutSection = () => {
         </p>
         <img
               src="/images/mother-vector.png"
-              className="block md:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40"
+              className="block lg:hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40"
               alt="decor star"
             />
       </div>

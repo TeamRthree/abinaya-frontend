@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section className="relative md:w-full mx-auto bg-white md:py-16 px-4 md:px-12 lg:px-40 flex flex-col md:flex-row items-center justify-between">
+    <section className="relative md:w-full mx-auto bg-white md:py-16 px-4 xl:px-12 2xl:px-40 flex flex-col md:flex-row items-center justify-between">
       {/* Left Content */}
-      <div className="md:max-w-xl space-y-6 text-center md:text-left">
-        <h1 className="text-[28px] md:text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
+      <div className="md:max-w-xs lg:max-w-lg xl:max-w-xl space-y-6 text-center md:text-left">
+        <h1 className="text-[28px] xl:text-3xl md:text-[24px] sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
           Caring For Women At Every Step Of Their Motherhood Journey.
         </h1>
         <p className="text-[#686A74] text-[16px] sm:text-[20px] md:pe-18">
@@ -28,11 +28,11 @@ const HeroSection = () => {
       </div>
 
       {/* Right Image */}
-      <div className=" relative mt-12 md:mt-0">
+      <div className=" relative mt-12 md:-mt-24 xl:mt-0">
         <img
           src='/images/doctor.jpg'
           alt="Dr. Abinaya"
-          className="w-xs md:w-full max-w-sm md:max-w-md xl:w-xl object-contain "
+          className="w-xs md:w-60 lg:w-sm xl:w-xs 2xl:w-md object-contain "
         />
 
         {/* Decorations */}

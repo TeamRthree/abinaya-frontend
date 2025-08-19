@@ -85,7 +85,7 @@ const BookAppointmentForm = () => {
       <form
         onSubmit={handleSubmit}
         style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)" }}
-        className="w-full md:w-3xl bg-white rounded-[10px] py-14 px-2 md:px-20 flex flex-col gap-4 relative"
+        className="w-full xl:w-3xl bg-white rounded-[10px] py-14 px-2 md:px-20 flex flex-col gap-4 relative"
       >
         {isSubmitted && (
           <div className="absolute inset-0 rounded-[10px] bg-[#FFF2F6] flex flex-col justify-center items-center transition-all duration-500 ease-in-out z-10">

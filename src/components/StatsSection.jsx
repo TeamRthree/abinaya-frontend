@@ -5,10 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 1200, label: ["Infertility Cases", "treated"], spacing: "px-8 md:pe-8" },
-  { value: 300, label: ["High Risk", "Pregnancies"], spacing: "px-8 md:px-8" },
-  { value: 8300, label: ["Happy", "Families"], spacing: "px-8 md:px-8" },
-  { value: 1500, label: ["Babies", "Delivered"], spacing: "px-8 md:px-8" },
+  { value: 1200, label: ["Infertility Cases", "treated"], spacing: "px-8 md:px-0 lg:pe-8" },
+  { value: 300, label: ["High Risk", "Pregnancies"], spacing: "px-8 md:px-0" },
+  { value: 8300, label: ["Happy", "Families"], spacing: "px-8 md:px-0" },
+  { value: 1500, label: ["Babies", "Delivered"], spacing: "px-8 md:px-0" },
 ];
 
 const StatsSection = () => {
@@ -39,7 +39,7 @@ const StatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="md:w-2xl mx-auto mt-20 text-center"
+      className="md:w-xl lg:w-2xl mx-auto mt-20 text-center"
     >
       <div className="mx-auto grid grid-cols-2 md:flex gap-y-8  justify-start md:text-center relative">
 

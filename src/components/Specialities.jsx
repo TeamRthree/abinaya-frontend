@@ -68,7 +68,7 @@ const handleClick = (id) => {
   return (
     <section className="w-full py-10 md:py-20 px-4 md:px-10 bg-[#D41E59]/10">
       <h2 className="text-center text-[24px] md:text-4xl font-semibold text-[#1D1E4C] mb-12 md:mb-[100px]">Specialities</h2>
-      <div className="xl:w-6xl mx-auto grid md:grid-cols-2 xl:grid-cols-2 gap-6 max-w-6xl">
+      <div className="2xl:w-6xl mx-auto grid  xl:grid-cols-2 gap-6 max-w-6xl">
         {specialities.map((item, index) => (
           <div
             key={index}
