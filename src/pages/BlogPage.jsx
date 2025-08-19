@@ -16,7 +16,7 @@ const BlogPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Blog Main */}
-      <div className="w-full h-[500px] mb-6">
+      <div className="w-full md:h-[500px] mb-6">
         <img
           src={blog.image}
           alt={blog.title}
@@ -25,7 +25,7 @@ const BlogPage = () => {
       </div>
 
       <p className="text-[#E73C7E] text-sm">{blog.date}</p>
-      <h1 className="text-[#26346C] text-3xl font-bold mb-6">{blog.title}</h1>
+      <h1 className="text-[#26346C] text-[24px] md:text-3xl font-bold mb-6">{blog.title}</h1>
 
       <div className="text-gray-700 space-y-4 mb-16">
         <BlogComponent />

@@ -9,7 +9,7 @@ const GallerySection = () => {
     const fetchGallery = async () => {
       try {
         const response = await api.get("/gallery"); // using your api instance
-        const imagesOnly = response.data.filter(item => item.type === "image");
+        const imagesOnly = response.data.filter((item) => item.type === "image");
         setGalleryItems(imagesOnly);
       } catch (error) {
         console.error("Gallery fetch failed:", error);
@@ -22,16 +22,19 @@ const GallerySection = () => {
   const visibleImages = galleryItems.slice(0, visibleCount);
 
   return (
-    <section className="py-10 px-4 lg:px-10">
-      <h2 className="text-2xl font-bold mb-6 text-center">Gallery</h2>
+    <section className="py-10 px-2 lg:px-10">
+      <h2 className="text-[24px] md:text-[30px] font-bold mb-6 text-[#E64771] text-start">Gallery</h2>
 
       {visibleImages.length === 0 ? (
         <p className="text-center text-gray-500">No images available.</p>
       ) : (
         <>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4 justify-items-center">
             {visibleImages.map((image, index) => (
-              <div key={index} className="w-[270px] h-[270px] overflow-hidden rounded-xl shadow">
+              <div
+                key={index}
+                className="w-full max-w-[270px] h-[140px] sm:h-[220px] aspect-square overflow-hidden rounded-[3px] md:rounded-xl shadow"
+              >
                 <img
                   src={image.file_path}
                   alt={`Gallery ${index + 1}`}
@@ -44,7 +47,7 @@ const GallerySection = () => {
           {visibleCount < galleryItems.length && (
             <div className="mt-6 text-center">
               <button
-                onClick={() => setVisibleCount(prev => prev + 16)}
+                onClick={() => setVisibleCount((prev) => prev + 16)}
                 className="px-6 py-2 bg-[#3A405B] text-white rounded hover:bg-[#2c324d] transition"
               >
                 View More

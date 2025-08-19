@@ -10,12 +10,16 @@ const galleryImages = [
 
 const GalleryHero = () => {
   return (
-    <div className="py-10 px-4 mx-auto sm:px-10">
-      <h2 className="text-pink-600 font-semibold text-lg mb-4">Latest Photos</h2>
-      
-      <div className="grid grid-cols-4 gap-4">
-        {/* Left side - big image */}
-        <div className="col-span-2">
+    <div className="md:py-10 px-4 mx-auto sm:px-10">
+      <h2 className="text-pink-600 font-semibold text-[24px] text-start md:text-[34px] mb-4">
+        Latest Photos
+      </h2>
+
+      {/* Responsive layout */}
+      <div className="grid gap-4 md:grid-cols-4">
+        {/* Mobile: Large top image full width */}
+        {/* Desktop: Big image on left (col-span-2) */}
+        <div className="md:col-span-2">
           <img
             src={galleryImages[0]}
             alt="Gallery Main"
@@ -23,19 +27,18 @@ const GalleryHero = () => {
           />
         </div>
 
-        {/* Right side - 4 small stacked */}
-        {/* Right side - 2x2 grid */}
-<div className="grid grid-cols-2 col-span-2 gap-4">
-  {galleryImages.slice(1).map((img, idx) => (
-    <img
-      key={idx}
-      src={img}
-      alt={`Gallery ${idx + 2}`}
-      className="w-full h-full object-cover rounded-xl shadow-md"
-    />
-  ))}
-</div>
-
+        {/* Mobile: grid 2x2 under big image */}
+        {/* Desktop: 2x2 grid on the right */}
+        <div className="grid grid-cols-2 gap-4 md:col-span-2">
+          {galleryImages.slice(1).map((img, idx) => (
+            <img
+              key={idx}
+              src={img}
+              alt={`Gallery ${idx + 2}`}
+              className="w-full h-full object-cover rounded-xl shadow-md"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -35,26 +35,26 @@ const ServiceHero = () => {
           className="text-[#E73C7E] text-sm md:text-[24px] font-medium py-2"
         >
           <span className="mx-4">Delivery</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Pregnancy</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Fertility Treatments</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Fertility Issues</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Recovery</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Delivery</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Pregnancy</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
          
           <span className="mx-4">Fertility Treatments</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Fertility Issues</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
           <span className="mx-4">Recovery</span>
-          <p className="w-3 h-3 bg-[#E73C7E] rounded-full"></p>
+          <p className="w-1 h-1 md:w-3 md:h-3 bg-[#E73C7E] rounded-full"></p>
         </Marquee>
       </div>
     </section>

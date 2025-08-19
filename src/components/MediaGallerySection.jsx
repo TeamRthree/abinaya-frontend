@@ -65,10 +65,18 @@ const mediaVideos = filtered; // use all videos in grid, regardless of how many 
 console.log("Media Videos (slice 3+):", mediaVideos);
 console.log("Visible Media Videos:", visibleMediaVideos);
 
+// Utility function
+const truncateTitle = (title, wordLimit = 5) => {
+  const words = title.split(" ");
+  if (words.length <= wordLimit) return title;
+  return words.slice(0, wordLimit).join(" ") + "...";
+};
+
+
   return (
-    <section className="w-full px-4 pt-10 pb-[125px] max-w-7xl mx-auto">
+    <section className="w-full px-4 md:pt-10 pb-[125px] max-w-7xl mx-auto">
       {/* Tabs and Search */}
-      <div className="flex items-center rounded-[2px] md:rounded-[6px] border-[0.2px] border-black/20 overflow-hidden w-full mb-10">
+      <div className="flex items-center rounded-[2px] md:rounded-[6px] border-[0.2px] border-black/20 overflow-hidden w-full mb-4 md:mb-10">
         <div className="flex justify-start md:w-[70%]">
           <button
             className={`px-[14px] md:px-24 rounded-[2px] md:rounded-[6px] py-[8px] md:py-3 font-medium ${activeTab === "media" ? "bg-[#FF56A6] text-white" : "bg-white text-gray-500"}`}
@@ -100,7 +108,7 @@ console.log("Visible Media Videos:", visibleMediaVideos);
       {activeTab === "media" && (
         <>
           {/* Latest Updates */}
-          <h2 className="text-center text-[#E64771] text-[36px] font-bold mb-6">
+          <h2 className="text-center text-[#E64771] text-[24px] md:text-[36px] font-bold mb-6">
             Latest Updates
           </h2>
           <div className={`grid gap-6 mb-10 ${platform === "instagram" ? "grid-cols-2 md:grid-cols-4" : "md:grid-cols-3"}`}>
@@ -111,9 +119,9 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                     <img
                       src={`https://img.youtube.com/vi/${video.video_id}/hqdefault.jpg`}
                       alt={video.title}
-                      className="w-full h-56 object-cover rounded-[5px]"
+                      className="w-full md:h-56 object-cover rounded-[5px]"
                     />
-                    <p className="p-3 text-sm font-medium text-gray-800">{video.title}</p>
+                    <p className="p-3 text-sm font-normal text-[#3A405B]/70">{truncateTitle(video.title)}</p>
                   </a>
                 ) : (
                   <a href={video.url} target="_blank" rel="noopener noreferrer">
@@ -174,9 +182,9 @@ console.log("Visible Media Videos:", visibleMediaVideos);
                     <img
                       src={`https://img.youtube.com/vi/${video.video_id}/hqdefault.jpg`}
                       alt={video.title}
-                      className="w-full h-56 object-cover rounded-[5px]"
+                      className="w-full md:h-56 object-cover rounded-[5px]"
                     />
-                    <p className="p-3 text-sm font-medium text-gray-800">{video.title}</p>
+                    <p className="p-3 text-sm font-normal text-[#3A405B]/70">{truncateTitle(video.title)}</p>
                   </a>
                 ) : (
                   <a href={video.url} target="_blank" rel="noopener noreferrer">

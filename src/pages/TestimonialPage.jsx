@@ -30,33 +30,33 @@ const TestimonialPage = () => {
   };
 
   return (
-    <section className="w-7xl mx-auto py-20 px-4 md:px-10">
-      <div className="w-full rounded-2xl overflow-hidden shadow-lg">
+    <section className="md:w-7xl mx-auto py-20 px-4 md:px-10">
+      <div className="w-full rounded-[5px] md:rounded-2xl overflow-hidden shadow-lg">
         <div className="relative">
           <img
             src="/images/faq-banner.png"
             alt="Consultation CTA"
-            className="w-full h-[320px] object-cover"
+            className="w-full h-[200px] md:h-[320px] object-fit md:object-cover"
           />
-          <div className="absolute inset-0 bg-[#FF56A6]/20 flex flex-col items-center justify-center text-white text-center px-4">
-            <h3 className="text-xl md:text-[36px] leading-11 font-semibold mb-2">
+          <div className="absolute inset-0 bg-[#FF56A6]/20 flex flex-col items-center justify-center text-white text-center px-8 md:px-4">
+            <h3 className="text-xl md:text-[36px] leading-tight md:leading-11 font-semibold mb-2">
               Schedule a Consultation <br className="hidden md:block" />
               with Our Specialist?
             </h3>
             <p className="text-sm md:text-[24px] mb-4">
-              A successful pregnancy starts with the right advice — book now.
+              A successful pregnancy starts with the right advice
             </p>
-            <button className="bg-white text-[#E64771] px-5 py-2 rounded-[4px] font-medium text-[18px] transition-all duration-300 ease-in-out hover:bg-[#E64771] hover:text-white ">
+            <button className="bg-white text-[#E64771] px-5 py-2 rounded-[4px] font-medium text-[14px] md:text-[18px] transition-all duration-300 ease-in-out hover:bg-[#E64771] hover:text-white ">
               Book Appointment
             </button>
           </div>
         </div>
       </div>
 
-      <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#E64771] mb-[10px] mt-[60px]">
+      <h2 className="text-center text-[24px] md:text-4xl font-semibold text-[#E64771] mb-[10px] mt-[60px]">
         What Our Patients Say
       </h2>
-      <p className="mb-[50px] text-[20px] text-[#3A405B]/70 text-center">
+      <p className="mb-[50px] text-[14px] md:text-[20px] text-[#3A405B]/70 text-center">
         Real stories from real patients who’ve trusted us with their care.
       </p>
 

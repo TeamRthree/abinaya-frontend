@@ -81,7 +81,7 @@ const BookAppointmentForm = () => {
   };
 
   return (
-    <section className="w-full flex flex-col px-4 md:px-0 items-center relative">
+    <section className="w-full flex flex-col  items-center relative">
       <form
         onSubmit={handleSubmit}
         style={{ boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)" }}

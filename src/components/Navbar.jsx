@@ -5,15 +5,15 @@ const Navbar = () => {
   return (
     <nav className="bg-[#FAFAFA] shadow-lg w-full fixed top-0 left-0 z-50">
       <div className="w-full mx-auto px-[16px] md:px-24 py-4 flex items-center justify-between">
-        {/* Left Section */}
-        <div className="cursor-pointer">
+        {/* Left Section → Logo */}
+        <Link to="/"  className="cursor-pointer">
           <h1 className="text-[14px] md:text-xl font-bold text-[#3A405B]">
             Dr. M. H. Abinaya
           </h1>
           <p className="text-[8px] md:text-sm text-[#FF56A6]">
             Fertility | Obstetrics | Gynaecology
           </p>
-        </div>
+        </Link>
 
         {/* Right Section */}
         <div>

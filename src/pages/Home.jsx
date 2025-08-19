@@ -21,7 +21,7 @@ const Home = () => {
         <RecentBlogs/>
         <FaqSection/>
 
-<div className='flex items-center flex-col pb-16'>
+<div className='flex px-4 items-center flex-col pb-16'>
   <h2 className="text-2xl md:text-[36px] font-semibold text-[#ff4fa0] pb-16">
         Contact Us
       </h2>
