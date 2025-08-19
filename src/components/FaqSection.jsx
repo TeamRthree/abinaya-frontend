@@ -78,7 +78,7 @@ const FaqSection = () => {
                   className="w-full flex justify-between items-center px-6 py-4 text-left"
                 >
                   <span
-                    className={`text-[#FF68AF] font-medium text-sm md:text-[20px] transition ${
+                    className={`text-[#FF68AF] font-medium text-[18px] md:text-[20px] transition ${
                       isOpen ? "opacity-100" : "opacity-80"
                     }`}
                   >
@@ -105,7 +105,7 @@ const FaqSection = () => {
                       }`}
                     />
                   </div>
-                  <p className="text-base text-[#FF68AF]">{item.answer}</p>
+                  <p className="text-[16px] text-[#FF68AF]">{item.answer}</p>
                 </div>
               </div>
             );
@@ -121,11 +121,11 @@ const FaqSection = () => {
             className="w-full h-[220px] object-fit"
           />
           <div className="absolute inset-0 bg-[#FF56A6]/20 flex flex-col items-center justify-center text-white text-center px-4">
-            <h3 className="text-xl md:text-[36px] md:eading-11 font-semibold mb-2">
+            <h3 className="text-xl md:text-[36px] md:leading-11 font-semibold mb-2">
               Schedule a Consultation <br className="hidden md:block" />
               with Our Specialist?
             </h3>
-            <p className="text-[12px] md:text-[24px] mb-4">
+            <p className="text-[16px] md:text-[24px] mb-4">
               A successful pregnancy starts with the right advice — book now.
             </p>
             <button className="bg-white text-[#E64771] px-5 py-2 rounded-[4px] font-medium text-[14px] md:text-[18px] transition-all duration-300 ease-in-out hover:bg-[#E64771] hover:text-white ">

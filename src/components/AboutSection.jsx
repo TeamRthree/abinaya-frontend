@@ -41,14 +41,14 @@ const AboutSection = () => {
           <h2 className="text-[24px] md:text-[36px] font-bold text-[#3A405B]">
             Dr. M. H. Abinaya
           </h2>
-          <p className="mt-2 text-[12px] md:text-[20px] text-[#7B84AD] font-normal md:font-medium">
+          <p className="mt-2 text-[14px] md:text-[20px] text-[#7B84AD] font-normal md:font-medium">
             M.B.B.S, DNB (OG), Advanced Fertility Training (Singapore), <br />
             Certificate In Ultrasound Imaging
           </p>
-          <div className="inline-block bg-[#FF56A6] text-white text-[12px] md:text-[20px] font-bold px-[15px] py-[10px] mt-4 ">
+          <div className="inline-block bg-[#FF56A6] text-white text-[14px] md:text-[20px] font-bold px-[15px] py-[10px] mt-4 ">
             Fertility | Obstetrics | Gynaecology
           </div>
-          <p className="mt-4 text-[14px] md:text-[20px] text-[#3A405B]/80 font-medium mb-2">22+ Years Of Experience</p>
+          <p className="mt-4 text-[16 px] md:text-[20px] text-[#3A405B]/80 font-medium mb-2">22+ Years Of Experience</p>
         </div>
 
         
@@ -58,16 +58,16 @@ const AboutSection = () => {
       <div style={{
     boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)', // x=0, y=0 → all-around glow
   }} className="relative max-w-6xl z-40 mx-auto mt-12 bg-white rounded-xl border border-[#EA3C60]/80 px-6 md:px-10 py-8 md:py-16 text-gray-700 leading-relaxed">
-        <h3 className="text-[20px] md:text-[32px] font-bold text-[#3A405B] mb-4">About Dr. M. H. Abinaya</h3>
-        <p className="mb-4 text-[12px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
+        <h3 className="text-[24px] md:text-[32px] font-bold text-[#3A405B] mb-4">About Dr. M. H. Abinaya</h3>
+        <p className="mb-4 text-[14px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
           Dr.M.H.Abinaya is a skilled specialist in fertility, obstetrics and gynaecology with more than 20 years of experience.
           She provides guidance and solace to couples struggling with infertility through various procedures from ovulation induction, IUI and IVF.
         </p>
-        <p className="mb-4 text-[12px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
+        <p className="mb-4 text-[14px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
           Dr.Abinaya is a believer in patients having normal deliveries and is known for providing sensible and comprehensive guidance to her patients.
           She has a proven track record of dealing with critical issues during pregnancy such as heart disease, anaemia, antepartum bleeding and postpartum bleeding.
         </p>
-        <p className=" text-[12px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
+        <p className=" text-[14px] md:text-[20px] font-light text-[#3A405B]/70 md:leading-[34px]">
           Dr.Abinaya completed an advanced fertility course in Singapore and a certificate in ultrasound imaging. She completed her DNB(OG) from Apollo Hospitals and MBBS from Trichy Medical College.
         </p>
         <img

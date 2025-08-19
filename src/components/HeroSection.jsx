@@ -10,10 +10,10 @@ const HeroSection = () => {
     <section className="relative md:w-full mx-auto bg-white md:py-16 px-4 md:px-12 lg:px-40 flex flex-col md:flex-row items-center justify-between">
       {/* Left Content */}
       <div className="md:max-w-xl space-y-6 text-center md:text-left">
-        <h1 className="text-[20px] md:text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
+        <h1 className="text-[28px] md:text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#3A405B] leading-tight">
           Caring For Women At Every Step Of Their Motherhood Journey.
         </h1>
-        <p className="text-[#686A74] text-[12px] sm:text-[20px] md:pe-18">
+        <p className="text-[#686A74] text-[16px] sm:text-[20px] md:pe-18">
           Expert care in fertility and pregnancy, tailored to your journey. With you from the first step to the moment you hold your baby.
         </p>
         <Link to="/contact" className="bg-[#FF56A6] font-medium text-[14px] md:text-[18px] text-[#FEFEFE] px-4 py-2 rounded-[6px] border hover:border-[#FF56A6] hover:text-[#FF56A6] hover:bg-transparent transition-all duration-300 ease-in-out">

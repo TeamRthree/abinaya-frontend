@@ -81,8 +81,8 @@ const Testimonials = () => {
                 </div>
                 
               </div>
-              <p className="mt-4 text-[12px] md:text-base text-[#3A405B]/70 opacity-80 leading-[130%]">
-  {activeTestimonial.text.split(" ").slice(0, 50).join(" ")}...
+              <p className="mt-4 text-[14px] md:text-base text-[#3A405B]/70 opacity-80 leading-[130%]">
+  {activeTestimonial.text.split(" ").slice(0, 40).join(" ")}...
 </p>
 
             </div>

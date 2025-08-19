@@ -95,7 +95,7 @@ const handleWhatsAppSend = () => {
         <div className="h-full mt-6 md:mt-0 text-center md:text-start">
             <p className="font-semibold text-[18px] mb-2">Office</p>
             <div className="flex flex-col gap-4 justify-between">
-<div className="md:mb-4 font-light text-white/90">
+<div className="md:mb-4 font-light  text-white/90">
             
             <p>15/6, Vidyodaya 1st Cross St,</p>
             <p>T. Nagar, Chennai-600017</p>

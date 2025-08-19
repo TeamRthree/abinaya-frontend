@@ -27,11 +27,11 @@ const recent = blogs.slice(0, 3);
               className="h-[250px] w-full rounded-[6px] object-cover "
             />
             <div className="p-5">
-              <p className="text-[12px] md:text-[16px] text-[#E64771] font-medium mb-1">{recent[0].date}</p>
-              <h3 className="text-[#3A405B] font-semibold text-[20px] md:text-[24px] mb-2">
+              <p className="text-[14px] md:text-[16px] text-[#E64771] font-medium mb-1">{recent[0].date}</p>
+              <h3 className="text-[#3A405B] font-semibold text-[22px] md:text-[24px] mb-2">
                 {recent[0].title}
               </h3>
-              <p className="text-[14px] md:text-[16px] text-[#667085] line-clamp-2">
+              <p className="text-[16px] md:text-[16px] text-[#667085] line-clamp-2">
                 {recent[0].excerpt}
               </p>
             </div>
@@ -54,11 +54,11 @@ const recent = blogs.slice(0, 3);
                   className="w-[40%] h-full rounded-[6px] object-cover flex-shrink-0 "
                 />
                 <div className="p-4">
-                  <p className="text-[10px] md:text-[16px] text-[#E73C7E] mb-[2px]">{blog.date}</p>
-                  <h4 className="text-[14px] md:text-[20px] font-medium md:font-semibold text-[#26346C] leading-[1.2] mb-1">
+                  <p className="text-[12px] md:text-[16px] text-[#E73C7E] mb-[2px]">{blog.date}</p>
+                  <h4 className="text-[16px] md:text-[20px] font-medium md:font-semibold text-[#26346C] leading-[1.2] mb-1">
                     {blog.title}
                   </h4>
-                  <p className="text-[10px] md:text-[16px] text-gray-600 line-clamp-2">
+                  <p className="text-[12px] md:text-[16px] text-gray-600 line-clamp-2">
                     {blog.excerpt}
                   </p>
                 </div>

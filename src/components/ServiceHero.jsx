@@ -7,11 +7,11 @@ const ServiceHero = () => {
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8">
         {/* Left Content */}
         <div className="text-center md:text-start">
-          <h1 className="text-[20px] md:text-[40px] font-bold text-[#3A405B] mb-4">
+          <h1 className="text-[24px] md:text-[40px] font-bold text-[#3A405B] mb-4">
             Comprehensive Women’s Health &{" "}
             <span className="text-[#EA3C60]/80">Fertility Services</span>
           </h1>
-          <p className="text-[#686A74] text-[12px] md:text-[24px] mb-6">
+          <p className="text-[#686A74] text-[16px] md:text-[24px] mb-6">
             Empowering Your Journey With Care, Expertise, And Compassion.
           </p>
          

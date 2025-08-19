@@ -11,7 +11,7 @@ const RecentBlogsSection = () => {
         <h2 className="text-[#E73C7E] text-[24px] md:text-[36px] font-medium text-center mb-4">
           Blogs
         </h2>
-        <p className="text-center text-[12px] md:text-[20px] text-[#26346C]/70 max-w-2xl mx-auto mb-10">
+        <p className="text-center text-[14px] md:text-[20px] text-[#26346C]/70 max-w-2xl mx-auto mb-10">
           We share common trends, strategies ideas, opinions, short & long stories from the team behind company.
         </p>
 
@@ -30,11 +30,11 @@ const RecentBlogsSection = () => {
               className="h-[250px] rounded-[6px] w-full object-cover "
             />
             <div className="py-5 md:p-5">
-              <p className="text-[12px] md:text-[16px] text-[#E64771] font-medium mb-1">{recent[0].date}</p>
-              <h3 className="text-[#3A405B] font-semibold text-[20px] md:text-[24px] mb-2">
+              <p className="text-[14px] md:text-[16px] text-[#E64771] font-medium mb-1">{recent[0].date}</p>
+              <h3 className="text-[#3A405B] font-semibold text-[22px] md:text-[24px] mb-2">
                 {recent[0].title}
               </h3>
-              <p className="text-[14px] md:text-[16px] text-[#667085] line-clamp-2">
+              <p className="text-[16px] md:text-[16px] text-[#667085] line-clamp-2">
                 {recent[0].excerpt}
               </p>
             </div>
@@ -61,7 +61,7 @@ const RecentBlogsSection = () => {
                   <h4 className="text-[14px] md:text-[20px] font-semibold text-[#26346C] leading-[1.2] mb-1">
                     {blog.title}
                   </h4>
-                  <p className="text-[10px] md:text-[16px] text-gray-600 line-clamp-2">
+                  <p className="text-[12px] md:text-[16px] text-gray-600 line-clamp-2">
                     {blog.excerpt}
                   </p>
                 </div>

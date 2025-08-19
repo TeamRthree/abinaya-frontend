@@ -56,7 +56,7 @@ const TestimonialPage = () => {
       <h2 className="text-center text-[24px] md:text-4xl font-semibold text-[#E64771] mb-[10px] mt-[60px]">
         What Our Patients Say
       </h2>
-      <p className="mb-[50px] text-[14px] md:text-[20px] text-[#3A405B]/70 text-center">
+      <p className="mb-[50px] text-[16px] md:text-[20px] text-[#3A405B]/70 text-center">
         Real stories from real patients who’ve trusted us with their care.
       </p>
 

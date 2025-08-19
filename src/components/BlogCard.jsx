@@ -20,11 +20,11 @@ const BlogCard = ({ blog }) => {
         />
 
         <div className="py-3 pr-4">
-          <p className="text-[#E72D74] text-[10px] md:text-[16px] font-medium mb-1">{formattedDate}</p>
-          <h3 className="text-[#26346C] text-[14px] md:text-[20px] font-medium md:font-semibold text-lg leading-snug mb-1">
+          <p className="text-[#E72D74] text-[12px] md:text-[16px] font-medium mb-1">{formattedDate}</p>
+          <h3 className="text-[#26346C] text-[16px] md:text-[20px] font-medium md:font-semibold text-lg leading-snug mb-1">
             {blog.title}
           </h3>
-          <p className="text-[#26346C]/70 text-[10px] md:text-[16px] leading-snug line-clamp-2">
+          <p className="text-[#26346C]/70 text-[12px] md:text-[16px] leading-snug line-clamp-2">
             {blog.excerpt}
           </p>
         </div>

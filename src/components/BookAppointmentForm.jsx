@@ -111,7 +111,7 @@ const BookAppointmentForm = () => {
               placeholder="Name"
               value={form.name}
               onChange={handleChange}
-              className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+              className="w-full border border-[#D9D9D9] text-[14px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
             />
             <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.name}</p>
           </div>
@@ -122,7 +122,7 @@ const BookAppointmentForm = () => {
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+              className="w-full border border-[#D9D9D9] text-[14px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
             />
             <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.email}</p>
           </div>
@@ -135,7 +135,7 @@ const BookAppointmentForm = () => {
             placeholder="Phone Number"
             value={form.phone}
             onChange={handleChange}
-            className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
+            className="w-full border border-[#D9D9D9] text-[14px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none"
           />
           <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.phone}</p>
         </div>
@@ -145,7 +145,7 @@ const BookAppointmentForm = () => {
     name="service"
     value={form.service}
     onChange={handleChange}
-    className="w-full border border-[#D9D9D9] text-[#3A405B] text-[12px] md:text-[14px] px-4 py-3 rounded-md outline-none bg-white"
+    className="w-full border border-[#D9D9D9] text-[#3A405B] text-[14px] md:text-[14px] px-4 py-3 rounded-md outline-none bg-white"
   >
     <option value="">Select a Service</option>
     <option value="Fertility">Fertility</option>
@@ -166,7 +166,7 @@ const BookAppointmentForm = () => {
             rows={4}
             value={form.message}
             onChange={handleChange}
-            className="w-full border border-[#D9D9D9] text-[12px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none resize-none"
+            className="w-full border border-[#D9D9D9] text-[14px] md:text-[16px] text-[#3A405B] px-4 py-3 rounded-md outline-none resize-none"
           />
           <p className="text-[#F564A9]/70 text-xs md:text-sm mt-1">{errors.message}</p>
         </div>
