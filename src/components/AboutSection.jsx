@@ -7,7 +7,7 @@ const AboutSection = () => {
         <div className="flex-shrink-0">
           <div className="relative w-[202px] h-[275px] md:w-[281px] md:h-[385px] rounded-full border border-[#FF56A6] shadow-lg mx-auto md:mx-0">
             <img
-              src="/images/doctor-2.jpg"
+              src="/images/doctor-3.jpg"
               alt="Dr. M. H. Abinaya"
               className="w-full h-full object-cover rounded-full p-4"
             />

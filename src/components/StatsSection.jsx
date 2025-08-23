@@ -39,7 +39,7 @@ const StatsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="md:w-xl lg:w-2xl mx-auto mt-20 text-center"
+      className="md:w-xl lg:w-2xl mx-auto lg:mx-0 mt-20 text-center"
     >
       <div className="mx-auto grid grid-cols-2 md:flex gap-y-8  justify-start md:text-center relative">
 
