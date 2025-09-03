@@ -9,7 +9,7 @@ const Services = () => {
       
 <ServiceHero/>
 <CareSpecialities/>
-<div className='py-8'>
+<div className='py-8 px-4'>
 <BookAppointmentForm/>
 </div>
 

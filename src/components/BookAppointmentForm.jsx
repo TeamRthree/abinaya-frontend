@@ -68,7 +68,7 @@ const BookAppointmentForm = () => {
     try {
       await bookAppointment(form);
       setIsSubmitted(true);
-      setForm({ name: "", email: "", phone: "", city: "", message: "" });
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
       setErrors({});
     } catch (error) {
       console.error("Booking failed:", error);

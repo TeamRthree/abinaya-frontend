@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"; // adjust the path
 const ServiceHero = () => {
   return (
     <section className="bg-white py-12 md:py-20">
-      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8">
+      <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8 md:gap-0 lg:gap-8">
         {/* Left Content */}
         <div className="text-center md:text-start">
-          <h1 className="text-[24px] md:text-[40px] font-bold text-[#3A405B] mb-4">
+          <h1 className="text-[24px] md:text-[32px] lg:text-[40px] font-bold text-[#3A405B] mb-4">
             Comprehensive Women’s Health &{" "}
             <span className="text-[#EA3C60]/80">Fertility Services</span>
           </h1>

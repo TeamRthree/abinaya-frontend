@@ -37,12 +37,12 @@ const handleWhatsAppSend = () => {
 
   return (
     <footer className="bg-[#FF77B7] md:mx-23 text-white px-4 md:px-18 2xl:px-24  pt-12 pb-24 md:pb-6">
-      <div className="flex justify-between items-center md:items-start flex-col lg:flex-row">
+      <div className="flex justify-between items-center lg:items-start flex-col lg:flex-row">
         {/* Left Column */}
         <div className="flex">
           <div className="flex justify-between flex-col">
             <div>
-<h2 className="text-[26px] font-bold ">Dr. M. H. Abinaya</h2>
+<h2 className="text-[20px] xl:text-[26px] font-bold ">Dr. M. H. Abinaya</h2>
           <p className="mb-4 font-light text-[14px]">
             Fertility | Obstetrics | Gynaecology
           </p>

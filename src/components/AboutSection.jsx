@@ -4,7 +4,7 @@ const AboutSection = () => {
       {/* Container */}
       <div className="max-w-6xl mx-auto flex flex-col md:mb-20 md:flex-row items-center gap-10 relative">
         {/* Left: Doctor Image */}
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 ps-2">
           <div className="relative w-[202px] h-[275px] md:w-[281px] md:h-[385px] rounded-full border border-[#FF56A6] shadow-lg mx-auto md:mx-0">
             <img
               src="/images/doctor-3.jpg"
@@ -38,14 +38,14 @@ const AboutSection = () => {
 
         {/* Right: Info */}
         <div className="flex-1 text-center md:text-start">
-          <h2 className="text-[24px] md:text-[36px] font-bold text-[#3A405B]">
+          <h2 className="text-[24px] md:text-[28px] lg:text-[36px] font-bold text-[#3A405B]">
             Dr. M. H. Abinaya
           </h2>
           <p className="mt-2 text-[14px] md:text-[20px] text-[#7B84AD] font-normal md:font-medium">
             M.B.B.S, DNB (OG), Advanced Fertility Training (Singapore), <br />
             Certificate In Ultrasound Imaging
           </p>
-          <div className="inline-block bg-[#FF56A6] text-white text-[14px] md:text-[20px] font-bold px-[15px] py-[10px] mt-4 ">
+          <div className="inline-block bg-[#FF56A6] text-white text-[14px] md:text-[12px] lg:text-[20px] font-bold px-[15px] py-[10px] mt-4 ">
             Fertility | Obstetrics | Gynaecology
           </div>
           <p className="mt-4 text-[16 px] md:text-[20px] text-[#3A405B]/80 font-medium mb-2">22+ Years Of Experience</p>
