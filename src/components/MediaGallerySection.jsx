@@ -6,15 +6,56 @@ import api from "../api/api";
 
 
 const instagramData = [
-  { type: "instagram", title: "Postnatal Tips", url: "https://www.instagram.com/reel/xyz1/" },
-  { type: "instagram", title: "Period Care", url: "https://www.instagram.com/reel/xyz2/" },
-  { type: "instagram", title: "Self Checkups", url: "https://www.instagram.com/reel/xyz3/" },
-  { type: "instagram", title: "Healthy Uterus", url: "https://www.instagram.com/reel/xyz4/" },
-  { type: "instagram", title: "Postnatal Tips", url: "https://www.instagram.com/reel/xyz1/" },
-  { type: "instagram", title: "Period Care", url: "https://www.instagram.com/reel/xyz2/" },
-  { type: "instagram", title: "Self Checkups", url: "https://www.instagram.com/reel/xyz3/" },
-  { type: "instagram", title: "Healthy Uterus", url: "https://www.instagram.com/reel/xyz4/" },
+  {
+    type: "instagram",
+    title: "Postnatal Tips",
+    url: "https://www.instagram.com/reel/DPjGaw3ipxx/?igsh=ZTd1azBsamZ5dGg0",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-839_i6smst.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Period Care",
+    url: "https://www.instagram.com/reel/DPv9nrvEXvB/?igsh=MWNkb2t2czVqcjBxZg==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-649_h3v0yk.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Self Checkups",
+    url: "https://www.instagram.com/reel/DP1HLhVjjas/?igsh=MXE0Z3FtZXdxajhqNA==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-392_gauvk1.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Healthy Uterus",
+    url: "https://www.instagram.com/reel/DPoO_cJAsE9/?igsh=cGc4NjV5bWI2Zzhz",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-209_uwnmqm.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Postnatal Tips",
+    url: "https://www.instagram.com/reel/DP6QsFZDBD9/?igsh=MWYxYTYzZ2ppZ3l1aw==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-634_rxmsyd.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Period Care",
+    url: "https://www.instagram.com/reel/DQB_GL-FWA0/?igsh=MXR3MjVtNGpyOWU5Nw==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742579/Image-587_uktju2.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Self Checkups",
+    url: "https://www.instagram.com/reel/DPd-lnCChVs/?igsh=MXdqc2N0dzF2bzd3MQ==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761739993/Image-934_lga7qa.jpg",
+  },
+  {
+    type: "instagram",
+    title: "Healthy Uterus",
+    url: "https://www.instagram.com/reel/DP_aaIdDSVq/?igsh=MTQwNDY1anB3YzQwZQ==",
+    thumbnail: "https://res.cloudinary.com/dlwy94hlr/image/upload/v1761742580/Image-424_m133ew.jpg",
+  },
 ];
+
 
 const MediaGallerySection = () => {
   const [activeTab, setActiveTab] = useState("media");
@@ -51,7 +92,10 @@ const filtered = allMedia.filter((item) =>
 
 
 
- const latestUpdates = filtered.slice(0, 3);
+const latestUpdates = platform === "youtube"
+  ? filtered.slice(0, 3)
+  : filtered.slice(0, 4);
+
 const mediaVideos = filtered; // use all videos in grid, regardless of how many are in latest
 
   const visibleMediaVideos = mediaVideos.slice(0, visibleCount);
@@ -125,11 +169,31 @@ const truncateTitle = (title, wordLimit = 5) => {
                   </a>
                 ) : (
                   <a href={video.url} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="/images/instagram-placeholder.jpg"
-                      alt={video.title}
-                      className="w-full h-[220px] md:h-[440px] object-cover rounded-[5px]"
-                    />
+                    <div className="relative group overflow-hidden rounded-[5px]">
+  <img
+    src={video.thumbnail || "/images/instagram-placeholder.jpg"}
+    alt={video.title}
+    className="w-full h-[220px] md:h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
+  />
+  {/* Overlay with Play Icon */}
+  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="white"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="white"
+      className="w-14 h-14 drop-shadow-lg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.25 6.75v10.5l7.5-5.25-7.5-5.25z"
+      />
+    </svg>
+  </div>
+</div>
+
                   </a>
                 )}
               </div>
@@ -188,11 +252,31 @@ const truncateTitle = (title, wordLimit = 5) => {
                   </a>
                 ) : (
                   <a href={video.url} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="/images/instagram-placeholder.jpg"
-                      alt={video.title}
-                      className="w-full h-[220px] md:h-[440px] object-cover rounded-[5px]"
-                    />
+                    <div className="relative group overflow-hidden rounded-[5px]">
+  <img
+    src={video.thumbnail || "/images/instagram-placeholder.jpg"}
+    alt={video.title}
+    className="w-full h-[220px] md:h-[440px] object-cover transition-transform duration-500 group-hover:scale-105"
+  />
+  {/* Overlay with Play Icon */}
+  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="white"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="white"
+      className="w-14 h-14 drop-shadow-lg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8.25 6.75v10.5l7.5-5.25-7.5-5.25z"
+      />
+    </svg>
+  </div>
+</div>
+
                   </a>
                 )}
               </div>
